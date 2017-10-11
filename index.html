@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Windowed</title>
+    <link rel="stylesheet" type="text/css" href="app.css"/>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script>window.jQuery = window.$ = module.exports;</script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="button-deck">
+        <button class="btn" id="gear"><i class="fa fa-cog" aria-hidden="true"></i></button>
+        <button class="btn" id="back"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        <button class="btn" id="refresh"><i class="fa fa-refresh" aria-hidden="true"></i> Refresh</button>
+        <button class="btn" id="forward"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
+      <div id="bar" class="hide">
+        <input type="text" placeholder="url" id="search" >
+        <button id="go-btn" >Go</button>
+        <button id="info">More info</button>
+      </div>
+      <webview id="webWindow" src="https://www.instagram.com/" useragent="Mobile/14E304 Safari/602.1"></webview>
+
+    </div>
+
+    <script type='text/javascript'>
+      function refreshPage() {
+        document.querySelector('#webWindow').reload();
+      }
+      document.querySelector('#refresh').addEventListener('click', refreshPage);
+
+      function backPage() {
+        document.querySelector('#webWindow').goBack();
+      }
+      document.querySelector('#back').addEventListener('click', backPage);
+
+      function forwardPage() {
+        document.querySelector('#webWindow').goForward();
+      }
+      document.querySelector('#forward').addEventListener('click', forwardPage);
+
+      document.querySelector('#go-btn').addEventListener('click', newPage);
+
+      function newPage() {
+         document.querySelector('#webWindow').loadURL(document.querySelector('#search').value);
+         $('#search').attr("placeholder", $('#search').val());
+      }
+
+      $('#gear').click(function(){
+        $('#bar').toggleClass('hide');
+      });
+
+      $('#info').click(function(){
+        document.querySelector('#webWindow').loadURL("http://windowed.io/about");
+        $('#search').attr("placeholder", "http://windowed.io/about");
+      });
+
+      $('#search').attr("placeholder", $('#webWindow').attr('src'));
+
+      function openBar() {
+         document.querySelector('#webWindow').loadURL(document.querySelector('#search').value);
+      }
+    </script>
+  </body>
+</html>

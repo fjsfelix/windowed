@@ -1,0 +1,98 @@
+@import "node_modules/font-awesome/css/font-awesome.css";
+
+#webWindow {
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+#button-deck {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+}
+#bar{
+  position: fixed;
+  display: flex;
+  width: 100%;
+  background-color: #ecf0f1;
+  align-items: stretch;
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.hide {
+    display:none!important;
+}
+#info {
+  width: 100%;
+  margin: 10px 0 0 0;
+  font-size: 22px;
+  cursor: pointer;
+  border: none;
+  background-color: #3498db;
+  color: #fafafa;
+  padding: 8px;
+}
+#go-btn {
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-size: 22px;
+  display: flex;
+  text-align: center !important;
+  height: 40px !important;
+  border: none;
+  background-color: #2ecc71;
+  color: #fafafa;
+  cursor: pointer;
+  border: none;
+}
+#search {
+  flex-grow: 4;
+  height: 40px;
+  font-size: 22px;
+  padding-left: 10px;
+  border: none;
+}
+#gear{
+  flex-grow: 0.5;
+}
+.btn {  
+  height: 39px;
+  display: block;
+  font-size: 18px;
+  cursor: pointer;
+  flex-grow: 1;
+  border: none;
+  background-color: #fafafa;
+}
+button:hover {
+  background-color: white;
+}
+button:focus{
+    outline: none;   
+}
+
+
+#container {
+  background-color: white;
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
