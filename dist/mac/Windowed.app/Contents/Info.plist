@@ -45,6 +45,6 @@
     <key>NSHumanReadableCopyright</key>
     <string>Copyright © 2017 Windowed.io</string>
     <key>AsarIntegrity</key>
-    <string>{"checksums":{"app.asar":"9YVmpHGGLG0xHL7UczGGek84fI8tdT4z9ZC4Alo2I5GS4rNMRidNHbBPWlE0JB9DsCyV4J41zGH+nY4vhMJCaQ==","electron.asar":"E0VzOFDGl10vUSrbYHZmEmLZx1jQKCUPWF+JLngj8lbgihQCML3iAz2ITqK1UhrYEV5lm/xLrs7h8RgAD0pgpw=="}}</string>
+    <string>{"checksums":{"app.asar":"CGdAFqWYmwvrEt0rEKnlgkpMlSGyJ4Jd/AaRDzKOJaG/iigpj+WWW4ViYVIe1qQTpYMpZbefvb3/Ioh9cw0HkQ==","electron.asar":"E0VzOFDGl10vUSrbYHZmEmLZx1jQKCUPWF+JLngj8lbgihQCML3iAz2ITqK1UhrYEV5lm/xLrs7h8RgAD0pgpw=="}}</string>
   </dict>
 </plist>
