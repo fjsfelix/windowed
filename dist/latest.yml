@@ -1,7 +1,7 @@
-version: 1.2.0
-releaseDate: '2017-10-12T23:36:46.842Z'
-path: Windowed Setup 1.2.0.exe
+version: 1.3.0
+releaseDate: '2017-10-15T18:24:43.192Z'
+path: Windowed Setup 1.3.0.exe
 sha512: >-
-  Q9h7fIy3UaTQ0HQL7gFOZgae5WQmTOFOJaMW9m9ldG/pIn1uzNowyKa717AVZS0ugZv5WlKaHcjPC1wG8NYjNg==
-sha2: 750929cbebfb23eb7e6685022b34655c8a1b4f3307cfdba2bfa0024bac0f855c
-githubArtifactName: Windowed-Setup-1.2.0.exe
+  y/xe+H0paYErmf2bxv5V5/g8VKHQZZlzXz7IjAxn2EwerMHu+VpNXYC6et/eJhTNQtMXBvD4XYVRe/9vPwsXlA==
+sha2: 955134b8051f306b53506f83749e67e1511e3b8ede23c9edb837c006279c2541
+githubArtifactName: Windowed-Setup-1.3.0.exe

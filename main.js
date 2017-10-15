@@ -51,6 +51,7 @@ function createWindow () {
   {
     label: 'View',
     submenu: [
+      // {role: 'toggledevtools'},
       {role: 'reload'},
       {role: 'forcereload'},
       {type: 'separator'},
@@ -59,7 +60,7 @@ function createWindow () {
   }
   ];
 
-    Menu.setApplicationMenu(Menu.buildFromTemplate(template));
+  Menu.setApplicationMenu(Menu.buildFromTemplate(template));
 }
 
 function googleAnalytics(){

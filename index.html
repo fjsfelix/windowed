@@ -4,63 +4,67 @@
     <meta charset="UTF-8">
     <title>Windowed</title>
     <link rel="stylesheet" type="text/css" href="app.css"/>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script>window.jQuery = window.$ = module.exports;</script>
   </head>
   <body>
-    <div id="container">
-      <div id="button-deck">
-        <button class="btn" id="gear"><i class="fa fa-cog" aria-hidden="true"></i></button>
-        <button class="btn" id="back"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-        <button class="btn" id="refresh"><i class="fa fa-refresh" aria-hidden="true"></i> Refresh</button>
-        <button class="btn" id="forward"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+    <div id="master-container">
+      <div id="session1" class="container">
+        <div class="nav">
+          <div class="button-deck">
+            <button class="btn back"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+            <button class="btn forward"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            <button class="btn refresh"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+            <button class="btn tab"><i class="fa fa-user-circle " aria-hidden="true"></i></button>
+            <button class="btn gear"><i class="fa fa-cog" aria-hidden="true"></i></button>
+          </div>
+          <div class="bar hide">
+            <input type="text" placeholder="url" class="search" >
+            <button class="go-btn" >Go</button>
+            <button class="info">More info</button>
+          </div>
+          <div class="tab-bar hide">
+            <div class="sessionbtn currentbtn" id="session1btn">
+              <input type="text" id="accountEdit1" class="edit-box hide">
+              <span id="accountName1" class="accountName">Account 1</span>
+              <button class="saveName hide" id="saveName1" sessionID="1">Save</button>
+              <i class="fa fa-pencil-square-o editNameBtn" id="editName1" aria-hidden="true" sessionID="1"></i>
+            </div>
+            <div class="sessionbtn" id="session2btn">
+              <input type="text" id="accountEdit2" class="edit-box hide">
+              <span id="accountName2" class="accountName">Account 2</span>
+              <button class="saveName hide" id="saveName2" sessionID="2">Save</button>
+              <i class="fa fa-pencil-square-o editNameBtn" id="editName2" aria-hidden="true" sessionID="2"></i>
+            </div>
+            <div class="sessionbtn" id="session3btn">
+              <input type="text" id="accountEdit3" class="edit-box hide">
+              <span id="accountName3" class="accountName">Account 3</span>
+              <button class="saveName hide" id="saveName3" sessionID="3">Save</button>
+              <i class="fa fa-pencil-square-o editNameBtn" id="editName3" aria-hidden="true" sessionID="3"></i>
+            </div>
+            <div class="sessionbtn" id="session4btn">
+              <input type="text" id="accountEdit4" class="edit-box hide">
+              <span id="accountName4" class="accountName">Account 4</span>
+              <button class="saveName hide" id="saveName4" sessionID="4">Save</button>
+              <i class="fa fa-pencil-square-o editNameBtn" id="editName4" aria-hidden="true" sessionID="4"></i>
+            </div>
+            <div class="sessionbtn" id="session5btn">
+              <input type="text" id="accountEdit5" class="edit-box hide">
+              <span id="accountName5" class="accountName">Account 5</span>
+              <button class="saveName hide" id="saveName5" sessionID="5">Save</button>
+              <i class="fa fa-pencil-square-o editNameBtn" id="editName5" aria-hidden="true" sessionID="5"></i>
+            </div>
+          </div>
+        </div>
+        <i class="fa fa-circle-o-notch fa-spin fa-3x spinnner" aria-hidden="true"></i>
+        <webview partition="persist:session1" class="webWindow currentTab" id="webWindow1" src="https://www.instagram.com/" useragent="Mobile/14E304 Safari/602.1"></webview>
+        <webview partition="persist:session2" class="webWindow hide" id="webWindow2" src="https://www.instagram.com/" useragent="Mobile/14E304 Safari/602.1"></webview>
+        <webview partition="persist:session3" class="webWindow hide" id="webWindow3" src="https://www.instagram.com/" useragent="Mobile/14E304 Safari/602.1"></webview>
+        <webview partition="persist:session4" class="webWindow hide" id="webWindow4" src="https://www.instagram.com/" useragent="Mobile/14E304 Safari/602.1"></webview>
+        <webview partition="persist:session5" class="webWindow hide" id="webWindow5" src="https://www.instagram.com/" useragent="Mobile/14E304 Safari/602.1"></webview>
       </div>
-      <div id="bar" class="hide">
-        <input type="text" placeholder="url" id="search" >
-        <button id="go-btn" >Go</button>
-        <button id="info">More info</button>
-      </div>
-      <webview id="webWindow" src="https://www.instagram.com/" useragent="Mobile/14E304 Safari/602.1"></webview>
-
     </div>
 
-    <script type='text/javascript'>
-      function refreshPage() {
-        document.querySelector('#webWindow').reload();
-      }
-      document.querySelector('#refresh').addEventListener('click', refreshPage);
-
-      function backPage() {
-        document.querySelector('#webWindow').goBack();
-      }
-      document.querySelector('#back').addEventListener('click', backPage);
-
-      function forwardPage() {
-        document.querySelector('#webWindow').goForward();
-      }
-      document.querySelector('#forward').addEventListener('click', forwardPage);
-
-      document.querySelector('#go-btn').addEventListener('click', newPage);
-
-      function newPage() {
-         document.querySelector('#webWindow').loadURL(document.querySelector('#search').value);
-         $('#search').attr("placeholder", $('#search').val());
-      }
-
-      $('#gear').click(function(){
-        $('#bar').toggleClass('hide');
-      });
-
-      $('#info').click(function(){
-        document.querySelector('#webWindow').loadURL("http://windowed.io/about");
-        $('#search').attr("placeholder", "http://windowed.io/about");
-      });
-
-      $('#search').attr("placeholder", $('#webWindow').attr('src'));
-
-      function openBar() {
-         document.querySelector('#webWindow').loadURL(document.querySelector('#search').value);
-      }
-    </script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="appWindow.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </body>
 </html>

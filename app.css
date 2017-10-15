@@ -1,19 +1,63 @@
 @import "node_modules/font-awesome/css/font-awesome.css";
 
-#webWindow {
-  width: 100%;
-  height: calc(100% - 40px);
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
-#button-deck {
+.spinnner {
+  position: absolute;
+  top: 320px;
+  left: calc(50% - 24px);
+}
+
+#master-container {
+  background-color: white;
+  display: block;
+  width: 100%;
+  height: 100vh;  
+}
+.container {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+.webWindow {
+  width: 100%;
+  height: calc(100% - 40px);
+  position: relative;
+  z-index: 1;
+}
+
+.webShort {
+  height: calc(100% - 162px);
+}
+
+.button-deck {
   width: 100%;
   height: 40px;
   display: flex;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(0,0,0,.0975);
 }
-#bar{
-  position: fixed;
+.bar{
+  position: absolute;
+  z-index: 100;
+  height: 112px;
   display: flex;
   width: 100%;
   background-color: #ecf0f1;
@@ -22,10 +66,58 @@
   padding: 10px;
   flex-wrap: wrap;
 }
+
+.tab-bar {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  background-color: #ecf0f1;
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+  padding: 10px 0;
+}
+
+.sessionbtn {
+  width: 100%;
+  margin: 0 0 0 0;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  color: #212121;
+  padding: 8px 16px 8px 30px;
+  border-left: 8px solid #ecf0f1;
+
+}
+.sessionbtn i{
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+}
+.currentbtn {
+  border-color: #2ecc71;
+  cursor: default;
+}
+.accountName {
+  height: 29px;
+}
+
+
+.sessionbtn:hover {
+  background-color: #FAFAFA;
+  border-color: #FAFAFA;
+}
+
+.currentbtn:hover {
+  background-color: #ecf0f1;
+  border-color: #2ecc71;
+}
+
 .hide {
     display:none!important;
 }
-#info {
+.info {
   width: 100%;
   margin: 10px 0 0 0;
   font-size: 22px;
@@ -35,7 +127,11 @@
   color: #fafafa;
   padding: 8px;
 }
-#go-btn {
+.info:hover {
+  background-color: #2980b9;
+}
+
+.go-btn {
   padding-left: 20px;
   padding-right: 20px; 
   font-size: 22px;
@@ -48,15 +144,16 @@
   cursor: pointer;
   border: none;
 }
-#search {
+.go-btn:hover {
+  background-color: #27ae60;
+}
+
+.search {
   flex-grow: 4;
   height: 40px;
   font-size: 22px;
   padding-left: 10px;
   border: none;
-}
-#gear{
-  flex-grow: 0.5;
 }
 .btn {  
   height: 39px;
@@ -75,24 +172,34 @@ button:focus{
 }
 
 
-#container {
-  background-color: white;
-  display: block;
-  width: 100%;
-  height: 100vh;
+.edit-box {
+  border: none;
+  font-size: 20px;
+  padding 5px;
+  border-bottom: 2px solid #212121;
+  background-color: #ecf0f1;
+  height: 29px;
+  position: relative;
+  bottom: 2px;
+  right: 1px;
 }
 
-body {
-  box-sizing: border-box;
-}
-body, html {
-  margin: 0px;
-  padding: 0px;
+.edit-box:focus{
+  outline: none;  
+  border-color: #3498db; 
 }
 
-html {
-  box-sizing: border-box;
+.saveName {
+  background-color: transparent;
+  border: none;
+  padding: 0 2px;
+  font-size: 15px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+.saveName:hover {
+  background-color: transparent;
+  border-bottom: 2px solid #2ecc71;
 }
+

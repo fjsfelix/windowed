@@ -19,9 +19,9 @@
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.2.0</string>
+    <string>1.3.0</string>
     <key>CFBundleVersion</key>
-    <string>1.2.0</string>
+    <string>1.3.0</string>
     <key>DTSDKBuild</key>
     <string>14D125</string>
     <key>DTSDKName</key>
@@ -45,6 +45,6 @@
     <key>NSHumanReadableCopyright</key>
     <string>Copyright © 2017 Windowed.io</string>
     <key>AsarIntegrity</key>
-    <string>{"checksums":{"app.asar":"ee/clq86HxvxCMSHCpDRWz/ZR1tANMpBbXeI60gi9n1n1A2S4fRTwzeQx0v76tc+9RHZuovzS4Wft0ZjFQKUGQ==","electron.asar":"E0VzOFDGl10vUSrbYHZmEmLZx1jQKCUPWF+JLngj8lbgihQCML3iAz2ITqK1UhrYEV5lm/xLrs7h8RgAD0pgpw=="}}</string>
+    <string>{"checksums":{"app.asar":"UTTZSkra9qLevEw9hwCbLQVuatoKN8vVhEs4r+GwRl+csmsR4IVP04SS3bgHQnug3dke++i+HSwN5xfFxn29MA==","electron.asar":"EMuworktGcipjf6N4IPKOo7yFFEHZcKK/43MEuzn5AdBKSjXU6X6OrZWjE2UwRVX2r6V1A2Hp3xhsxUsLLmNUg=="}}</string>
   </dict>
 </plist>
