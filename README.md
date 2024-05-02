@@ -1,5 +1,6 @@
 # Windowed
 an app which can upload photos to instagram directly from your deskop and switch between multiple accounts, made with electron
+
 ![windowed](https://github.com/fjsfelix/windowed/assets/9030205/af37c83c-2ad2-43af-9f58-00f6f78abe20)
 
 ## Windowed now at end of life (2017 - 2022)
